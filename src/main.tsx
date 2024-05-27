@@ -1,20 +1,21 @@
 import "./main.css";
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
-import { RouterProvider, createRouter, createMemoryHistory } from "@tanstack/react-router";
+import { RouterProvider, createRouter } from "@tanstack/react-router";
 // Import the generated route tree
 import { routeTree } from "./routeTree.gen";
 import { TimerProvider, useTimer } from "./TimerContext";
 
-const memoryHistory = createMemoryHistory({
-  initialEntries: ['/'],
-})
+// const memoryHistory = createMemoryHistory({
+//   initialEntries: ['/'],
+// })
 
 // Create a new router instance
 const router = createRouter({
   routeTree,
   context: undefined!,
-  history: memoryHistory,
+  //history: memoryHistory,
+  //basepath: "/training-app/"
 });
 
 // Register the router instance for type safety
