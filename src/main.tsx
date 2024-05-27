@@ -15,7 +15,7 @@ const router = createRouter({
   routeTree,
   context: undefined!,
   //history: memoryHistory,
-  //basepath: "/training-app/"
+  basepath: "/training-app/"
 });
 
 // Register the router instance for type safety
