@@ -1,6 +1,6 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import Progressbar from "../components/Progressbar";
-import { Route as completedRoute } from "./completed";
+import { Route as completedRoute } from "./exercise_.completed";
 import { useTimer } from "../TimerContext";
 import { useState, useEffect } from "react";
 

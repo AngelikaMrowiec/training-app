@@ -12,21 +12,16 @@
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as ExerciseImport } from './routes/exercise'
-import { Route as CompletedImport } from './routes/completed'
 import { Route as IndexImport } from './routes/index'
 import { Route as ExerciseWithoutbreakImport } from './routes/exercise_.withoutbreak'
 import { Route as ExerciseTimerImport } from './routes/exercise_.timer'
+import { Route as ExerciseCompletedImport } from './routes/exercise_.completed'
 import { Route as ExerciseBreakImport } from './routes/exercise_.break'
 
 // Create/Update Routes
 
 const ExerciseRoute = ExerciseImport.update({
   path: '/exercise',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const CompletedRoute = CompletedImport.update({
-  path: '/completed',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -42,6 +37,11 @@ const ExerciseWithoutbreakRoute = ExerciseWithoutbreakImport.update({
 
 const ExerciseTimerRoute = ExerciseTimerImport.update({
   path: '/exercise/timer',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const ExerciseCompletedRoute = ExerciseCompletedImport.update({
+  path: '/exercise/completed',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -61,13 +61,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
-    '/completed': {
-      id: '/completed'
-      path: '/completed'
-      fullPath: '/completed'
-      preLoaderRoute: typeof CompletedImport
-      parentRoute: typeof rootRoute
-    }
     '/exercise': {
       id: '/exercise'
       path: '/exercise'
@@ -80,6 +73,13 @@ declare module '@tanstack/react-router' {
       path: '/exercise/break'
       fullPath: '/exercise/break'
       preLoaderRoute: typeof ExerciseBreakImport
+      parentRoute: typeof rootRoute
+    }
+    '/exercise/completed': {
+      id: '/exercise/completed'
+      path: '/exercise/completed'
+      fullPath: '/exercise/completed'
+      preLoaderRoute: typeof ExerciseCompletedImport
       parentRoute: typeof rootRoute
     }
     '/exercise/timer': {
@@ -103,9 +103,9 @@ declare module '@tanstack/react-router' {
 
 export const routeTree = rootRoute.addChildren({
   IndexRoute,
-  CompletedRoute,
   ExerciseRoute,
   ExerciseBreakRoute,
+  ExerciseCompletedRoute,
   ExerciseTimerRoute,
   ExerciseWithoutbreakRoute,
 })
