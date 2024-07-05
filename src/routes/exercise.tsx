@@ -5,8 +5,8 @@ import CircleButton from "../components/CircleButton";
 
 export const Route = createFileRoute("/exercise")({
   component: () => (
-    <div className="flex flex-col items-center justify-center mt-10 mx-5 xs:mt-20 xs:mx-10">
-      <h2 className="text-center text-3xl xs:text-4xl md:text-5xl">
+    <header className="flex flex-col items-center justify-center m-auto">
+      <h2 className="text-center text-3xl xs:text-4xl md:text-5xl mt-20 mx-10 md:m-20">
         Do you prefer to have a break between the exercises? <br />
         If so, <span className="text-purplerain-light animate-pulse">
           tap </span>here!
@@ -17,6 +17,6 @@ export const Route = createFileRoute("/exercise")({
         <span className="text-purplerain-light animate-pulse"> tap </span>here!
       </h2>
       <CircleButton to={withoutBreakRoute.to} />
-    </div>
+    </header>
   ),
 });

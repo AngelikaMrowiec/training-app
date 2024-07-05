@@ -27,9 +27,9 @@ function ExerciseBreak() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col items-center justify-center mt-5 mb-5 mx-auto p-6 max-w-md"
+      className="flex flex-col items-center justify-center m-auto p-6 max-w-md"
     >
-      <div className="flex flex-col items-center m-10">
+      <div className="flex flex-col items-center m-8">
         <label className="mb-2 sm:text-2xl text-xl font-semibold text-center">
           Set a number of repetitions:
         </label>
@@ -40,7 +40,7 @@ function ExerciseBreak() {
           className="h-10 w-64 bg-greywolf-light rounded-full text-center px-4 py-2 border border-gray-300 focus:outline-none"
         />
       </div>
-      <div className="flex flex-col items-center m-10">
+      <div className="flex flex-col items-center m-8">
         <label className="mb-2 sm:text-2xl text-xl font-semibold text-center">
           exercise time measured in seconds:
         </label>
@@ -51,7 +51,7 @@ function ExerciseBreak() {
           className="h-10 w-64 bg-greywolf-light rounded-full text-center px-4 py-2 border border-gray-300 focus:outline-none"
         />
       </div>
-      <div className="flex flex-col items-center m-10">
+      <div className="flex flex-col items-center m-8">
         <label className="mb-2 sm:text-2xl text-xl font-semibold text-center">
           and break time measured in seconds:
         </label>

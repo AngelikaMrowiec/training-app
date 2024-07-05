@@ -32,23 +32,23 @@ function Timer() {
   }, [repetitionNumber]);
 
   return (
-    <div className="flex flex-col justify-center items-center mt-20 md:mt-0">
+    <main className="flex flex-col justify-center items-center m-auto">
       {isBreak && (
-      <>
+      <div className="mt-32 md:mt-20">
       <Progressbar time={breakTime} key={repetitionNumber} decrement={handleBreak}/>
-      <p className="mt-24 md:mt-0 text-3xl md:text-4xl">Remaining repetitions: {repetitionNumber}</p>
-      </>
+      <p className="mt-24 md:mt-0 text-center text-3xl md:text-4xl">Remaining repetitions: {repetitionNumber}</p>
+      </div>
       )}
       {!isBreak && (
-        <>
+        <div className="mt-32 md:mt-20">
         <Progressbar
           time={exerciseTime}
           key={repetitionNumber}
           decrement={decrementRepetitionNumber}
         />
-        <p className="mt-24 md:mt-0 text-3xl md:text-4xl">Remaining repetitions: {repetitionNumber}</p>
-        </>
+        <p className="mt-24 md:mt-0 text-center text-3xl md:text-4xl">Remaining repetitions: {repetitionNumber}</p>
+        </div>
       )}
-    </div>
+    </main>
   );
 }

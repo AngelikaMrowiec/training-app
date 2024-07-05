@@ -39,7 +39,7 @@ export default function Progressbar({ time, decrement }: BarProps) {
   }, [value]);
 
   return (
-    <div className="m-10 md:size-1/4 md:m-40">
+    <div className="m-10 md:m-40">
       <ReactHowler
         src={sound}
         playing={isPlaying}
