@@ -9,13 +9,13 @@ type BarProps = {
   decrement: () => void;
 };
 
-const intervalTime = 10;
+const intervalTime = 100;
 const msInSecond = 1000;
 
 export default function Progressbar({ time, decrement }: BarProps) {
   const [value, setValue] = useState(0);
   const [isPlaying, setIsPLaying] = useState(false);
-  const maxValue = (msInSecond * time) / intervalTime;
+  const maxValue = time * (msInSecond / intervalTime);
   const remainingTime = Math.round(
     (maxValue - value) * (intervalTime / msInSecond)
   );
@@ -54,7 +54,7 @@ export default function Progressbar({ time, decrement }: BarProps) {
           textColor: "white",
           trailColor: "#d6d6d6",
           textSize: 22,
-          pathTransitionDuration: 0.001,
+          pathTransitionDuration: 0.1,
         })}
       />
     </div>

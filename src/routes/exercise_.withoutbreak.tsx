@@ -26,7 +26,7 @@ function ExerciseWithoutBreak() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col items-center justify-center m-auto p-6 max-w-md"
+      className="flex flex-col items-center justify-center m-auto p-6 max-w-md md:pt-32"
     >
       <div className="flex flex-col items-center m-8">
         <label className="mb-2 sm:text-2xl text-xl font-semibold text-center">
